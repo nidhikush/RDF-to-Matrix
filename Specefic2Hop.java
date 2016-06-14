@@ -34,19 +34,15 @@ public class Specefic2Hop {
 		String service = "http://dbpedia.org/sparql";
 		// String service = "http://localhost:8890/sparql";
 		System.setProperty("http.proxyPort", "8080");
-		System.setProperty("http.proxyHost", "172.31.1.4");
+		System.setProperty("http.proxyHost", "IP.IP.IP.IP");
 		Authenticator.setDefault(new Authenticator() {
 			@Override
 			protected PasswordAuthentication getPasswordAuthentication() {
-				return new PasswordAuthentication("rs97", "mintmint12".toCharArray());
+				return new PasswordAuthentication("1234", "1234".toCharArray());
 			}
 		});
-		//FileOutputStream ostream = new FileOutputStream(
-			//	"E:\\datasets\\DBpedia2Movielens1Mv1.1\\Dcterm_Movielens2Lookup.csv");
-	//	DataOutputStream out = new DataOutputStream(ostream);
-		//BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(out));
-		FileInputStream fstream = new FileInputStream(
-				"E:\\datasets\\DBpedia2Movielens1Mv1.1\\Updated_Movielens2Lookup.csv");
+	        FileInputStream fstream = new FileInputStream(
+				"E:\\datasets\\DBpedia2Movielens1Mv1.1\\Updated_Movielens2Lookup.csv"); //mapped file of DBpedia and MovieLens
 		DataInputStream in = new DataInputStream(fstream);
 		BufferedReader br = new BufferedReader(new InputStreamReader(in));
 		String db;
